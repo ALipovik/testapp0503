@@ -95,6 +95,12 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            const Align(alignment: Alignment.centerLeft, child: Text('HELLO')),
+            Container(
+              color: Colors.lightBlueAccent,
+              alignment: Alignment.center,
+              child: const Text('12345676', textDirection: TextDirection.ltr),
+            ),
             const Text(
               'You have pushed the button this many times:',
             ),
