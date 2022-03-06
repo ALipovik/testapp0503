@@ -95,22 +95,56 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Align(alignment: Alignment.centerLeft, child: Text('HELLO')),
+            const Align(
+                alignment: Alignment.centerLeft,
+                child: Text('Alignment Text Test')),
+            const Center(
+              child: Text(
+                'Text Center Align',
+                textDirection: TextDirection.rtl,
+              ),
+            ),
+            const Padding(
+              padding:
+                  EdgeInsets.only(top: 40, bottom: 30, left: 20, right: 20),
+              child: Align(
+                alignment: Alignment.bottomLeft,
+                child: Text(
+                  'NEW TEXT PADDING',
+                  textDirection: TextDirection.ltr,
+                ),
+              ),
+            ),
+            Center(
+              child: ConstrainedBox(
+                constraints: BoxConstraints.tightFor(width: 200, height: 100),
+                child: Text('constrainedBox TEXT',
+                    textDirection: TextDirection.ltr,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 40)),
+              ),
+            ),
             Container(
-              color: Colors.lightBlueAccent,
-              alignment: Alignment.center,
-              child: const Text('12345676', textDirection: TextDirection.ltr),
+              color: Colors.lightGreenAccent,
+              alignment: Alignment.topRight,
+              padding: EdgeInsets.all(30),
+              margin: EdgeInsets.only(top: 40),
+              child: Text(
+                'I need Help Container',
+                textDirection: TextDirection.ltr,
+              ),
             ),
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            Container(
+                padding: EdgeInsets.all(50),
+                color: Colors.red,
+                child: Column(
+                  textDirection: TextDirection.ltr,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                )),
           ],
         ),
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
