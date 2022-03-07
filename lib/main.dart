@@ -141,6 +141,37 @@ class _MyHomePageState extends State<MyHomePage> {
                   textDirection: TextDirection.ltr,
                   crossAxisAlignment: CrossAxisAlignment.start,
                 )),
+            Container(
+                padding: EdgeInsets.all(40),
+                color: Color.fromARGB(200, 100, 0, 98),
+                child: Column(
+                  children: <Widget>[
+                    Text('Этот текст первый в тесте COLUMN,',
+                        textDirection: TextDirection.ltr),
+                    Text('Этот текст второй в тексте.',
+                        textDirection: TextDirection.ltr),
+                    Text('была проблема с двумя виджетами,',
+                        textDirection: TextDirection.ltr),
+                    Text('Она решилась благодаря больше меньше',
+                        textDirection: TextDirection.ltr),
+                    Container(
+                        padding: EdgeInsets.all(30),
+                        color: Colors.blue,
+                        child: Row(
+                          textDirection: TextDirection.ltr,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          verticalDirection: VerticalDirection.down,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Text('ROW TEST TEXT',
+                                textDirection: TextDirection.ltr),
+                            Text('Test mini', textDirection: TextDirection.ltr),
+                            Text('NEW TeXt', textDirection: TextDirection.ltr),
+                            Text('GoodLuck', textDirection: TextDirection.ltr),
+                          ],
+                        ))
+                  ],
+                ))
           ],
         ),
       ),
