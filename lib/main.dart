@@ -1,6 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:test_app/myStackWiget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,19 +44,21 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
-        ),
-        body: Container(
-          padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
-          color: Colors.green,
-          child: const Text('Helllo too Text new Test',
-              textDirection: TextDirection.ltr,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Colors.red,
-                  fontSize: 30,
-                  backgroundColor: Colors.yellow)),
-        ));
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: MyStackWiget(),
+      // body: Container(
+      //   padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
+      //   color: Colors.green,
+      //   child: const Text('Helllo too Text new Test',
+      //       textDirection: TextDirection.ltr,
+      //       textAlign: TextAlign.center,
+      //       style: TextStyle(
+      //           color: Colors.red,
+      //           fontSize: 30,
+      //           backgroundColor: Colors.yellow)),
+      // ),
+    );
   }
 }
